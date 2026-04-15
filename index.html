@@ -98,31 +98,9 @@
     font-family: 'DM Sans', sans-serif;
     font-weight: 300;
     overflow-x: hidden;
-    cursor: none;
   }
 
-  /* Custom cursor */
-  .cursor {
-    position: fixed;
-    width: 12px; height: 12px;
-    background: var(--bright-blue);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s ease, background 0.2s;
-    mix-blend-mode: screen;
-  }
-  .cursor-ring {
-    position: fixed;
-    width: 40px; height: 40px;
-    border: 1px solid rgba(96,165,250,0.5);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: all 0.15s ease;
-  }
+
 
   /* Noise overlay */
   body::before {
@@ -208,11 +186,11 @@
   /* ── HERO LOGO BACKGROUND ── */
   .hero-logo-bg {
     position: absolute;
-    right: -2%;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
-    width: 52%;
-    max-width: 680px;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    max-width: 750px;
     opacity: 0.05;
     pointer-events: none;
     user-select: none;
@@ -1045,7 +1023,7 @@
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.05em;
-    cursor: none;
+    cursor: pointer;
     transition: all 0.3s;
     margin-top: 0.5rem;
   }
@@ -1815,8 +1793,6 @@
   </div>
 </div>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
 <!-- NAV -->
 <nav>
@@ -1855,10 +1831,7 @@
     </div>
   </div>
 
-  <div class="scroll-indicator">
-    <div class="scroll-line"></div>
-    <span class="scroll-text">Scroll</span>
-  </div>
+
 
   <div class="stats-strip">
     <div class="stat">
@@ -2324,38 +2297,6 @@
 </footer>
 
 <script>
-  // Custom cursor
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.left = mx + 'px';
-    cursor.style.top = my + 'px';
-  });
-
-  (function animateRing() {
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
-    ring.style.left = rx + 'px';
-    ring.style.top = ry + 'px';
-    requestAnimationFrame(animateRing);
-  })();
-
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.style.transform = 'translate(-50%,-50%) scale(2)';
-      ring.style.transform = 'translate(-50%,-50%) scale(1.5)';
-      ring.style.borderColor = 'rgba(96,165,250,0.8)';
-    });
-    el.addEventListener('mouseleave', () => {
-      cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-      ring.style.transform = 'translate(-50%,-50%) scale(1)';
-      ring.style.borderColor = 'rgba(96,165,250,0.5)';
-    });
-  });
-
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(entries => {
@@ -2527,10 +2468,8 @@
     function resize(){W=hc.width=hs.offsetWidth;H=hc.height=hs.offsetHeight;initF();}
     resize();window.addEventListener('resize',resize);
     var rings=Array.from({length:5},function(_,i){return{r:60+i*55,speed:(i%2===0?1:-1)*(0.12-i*0.018),angle:i*1.2,nodes:5+i*2,dash:[6+i*2,8+i*3]};});
-    var mouse={x:W/2,y:H/2};
-    hs.addEventListener('mousemove',function(e){var rc=hs.getBoundingClientRect();mouse.x=e.clientX-rc.left;mouse.y=e.clientY-rc.top;});
     function drawRing(ring){
-      var cx=W/2+(mouse.x-W/2)*0.04,cy=H/2+(mouse.y-H/2)*0.04;
+      var cx=W/2,cy=H/2;
       ctx.save();ctx.translate(cx,cy);ctx.rotate(ring.angle);
       ctx.setLineDash(ring.dash);ctx.strokeStyle='rgba(79,158,255,'+(0.12-ring.nodes*0.005)+')';ctx.lineWidth=0.8;
       ctx.beginPath();ctx.arc(0,0,ring.r,0,Math.PI*2);ctx.stroke();ctx.setLineDash([]);
