@@ -4,6 +4,8 @@
 <!-- GOOGLE SEARCH CONSOLE: Replace content value below with your verification code -->
 <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE">
 <meta charset="UTF-8">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KG Digital — Web Development Agency Ireland</title>
 <meta name="description" content="KG Digital is an Irish web development and management agency. We build fast, modern websites for businesses across Ireland — delivered in 48 hours.">
@@ -892,6 +894,31 @@
     transform: translateY(-2px);
   }
 
+  /* ── REVIEWS CTA ── */
+  #reviews-cta {
+    background: var(--deep);
+    padding: 6rem 4rem;
+    text-align: center;
+    border-top: 1px solid rgba(37,99,196,0.15);
+    border-bottom: 1px solid rgba(37,99,196,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .reviews-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .reviews-cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
   /* ── CONTACT ── */
   #contact {
     background: linear-gradient(to bottom, var(--black), var(--deep));
@@ -1134,9 +1161,10 @@
     nav { padding: 1.2rem 1.5rem; }
     section { padding: 5rem 1.5rem; }
     #hero { padding: 7rem 1.5rem 4rem; }
-    .services-grid, .process-steps, .pricing-grid { grid-template-columns: 1fr; }
-    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .services-grid, .pricing-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .why-points-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
     .stats-strip { display: none; }
     .nav-hamburger { display:flex; }
     .nav-links { display:none; }
@@ -1617,6 +1645,13 @@
   /* === Reviews CTA section === */
   .reviews-cta-btns { display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin-top:2.5rem; }
 
+  /* Keyboard focus indicators */
+  :focus-visible { outline: 2px solid var(--bright-blue); outline-offset: 3px; border-radius: 2px; }
+  :focus:not(:focus-visible) { outline: none; }
+  .form-gdpr-note { font-size:0.78rem; color:rgba(240,244,255,0.4); line-height:1.7; margin-bottom:0.8rem; }
+  .form-gdpr-note a { color:var(--sky); text-decoration:none; }
+  .form-gdpr-note a:hover { text-decoration:underline; }
+
 </style>
 </head>
 <body>
@@ -1640,15 +1675,21 @@
   /* === Reviews CTA section === */
   .reviews-cta-btns { display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin-top:2.5rem; }
 
+  /* Keyboard focus indicators */
+  :focus-visible { outline: 2px solid var(--bright-blue); outline-offset: 3px; border-radius: 2px; }
+  :focus:not(:focus-visible) { outline: none; }
+  .form-gdpr-note { font-size:0.78rem; color:rgba(240,244,255,0.4); line-height:1.7; margin-bottom:0.8rem; }
+  .form-gdpr-note a { color:var(--sky); text-decoration:none; }
+  .form-gdpr-note a:hover { text-decoration:underline; }
+
 </style>
 
 <!-- COOKIE BANNER -->
 <div id="cookie-banner" role="region" aria-label="Cookie consent">
-  <p>We use essential cookies to make our site work. We'd also like to set optional analytics cookies to help us improve it. We won't set optional cookies unless you accept. <a href="#" onclick="openModal('privacy');return false;">Privacy Policy</a></p>
+  <p>This site uses only essential cookies required for it to function. No tracking or analytics cookies are used. <a href="#" onclick="openModal('privacy');return false;">Privacy Policy</a></p>
   <div class="cookie-btns">
-    <button class="cookie-reject" onclick="closeCookie('reject')">Essential only</button>
-    <button class="cookie-manage" onclick="openModal('cookie-settings')">Manage Preferences</button>
-    <button class="cookie-accept" onclick="closeCookie('accept')">Accept all</button>
+    <button class="cookie-manage" onclick="openModal('cookie-settings')">Cookie Info</button>
+    <button class="cookie-accept" onclick="closeCookie('accept')">Got it</button>
   </div>
 </div>
 
@@ -1737,7 +1778,7 @@
     <button class="legal-close" onclick="closeModal('cookie-settings')" aria-label="Close">&#x2715;</button>
     <h2 id="cookie-settings-title">Cookie Preferences</h2>
     <span class="legal-date">Manage your cookie settings</span>
-    <p>We use different types of cookies. Essential cookies are always active as they are required for the site to function. You can choose whether to accept optional cookies below.</p>
+    <p>This site uses only essential cookies required for it to function. No analytics, tracking, or marketing cookies are used.</p>
     <div class="cookie-pref-item">
       <div class="cookie-pref-info">
         <strong>Essential Cookies</strong>
@@ -1745,23 +1786,8 @@
       </div>
       <label class="cookie-toggle-label"><input type="checkbox" checked disabled aria-label="Essential cookies (always on)"> <span class="cookie-toggle-always">Always On</span></label>
     </div>
-    <div class="cookie-pref-item">
-      <div class="cookie-pref-info">
-        <strong>Analytics Cookies</strong>
-        <p>Help us understand how visitors interact with the site. No personally identifiable information is stored.</p>
-      </div>
-      <label class="cookie-toggle-label"><input type="checkbox" id="analytics-toggle" aria-label="Analytics cookies"> <span class="cookie-toggle-text">Allow</span></label>
-    </div>
-    <div class="cookie-pref-item">
-      <div class="cookie-pref-info">
-        <strong>Functional Cookies</strong>
-        <p>Enable enhanced features such as font loading and user preferences.</p>
-      </div>
-      <label class="cookie-toggle-label"><input type="checkbox" id="functional-toggle" aria-label="Functional cookies"> <span class="cookie-toggle-text">Allow</span></label>
-    </div>
-    <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
-      <button class="cookie-reject" onclick="saveCookiePrefs('reject')">Reject All Optional</button>
-      <button class="cookie-accept" onclick="saveCookiePrefs('accept')">Save &amp; Accept Selected</button>
+    <div style="margin-top:1.5rem;">
+      <button class="cookie-accept" onclick="closeCookie('accept');closeModal('cookie-settings')">Got it</button>
     </div>
   </div>
 </div>
@@ -1814,7 +1840,7 @@
 <!-- HERO -->
 <section id="hero">
   <canvas id="hero-canvas"></canvas>
-  <img id="hero-logo-bg" class="hero-logo-bg" alt="" aria-hidden="true">
+  <img id="hero-logo-bg" class="hero-logo-bg" alt="" aria-hidden="true" width="750" height="750">
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
 
@@ -1972,7 +1998,7 @@
 
 <!-- WHY US -->
 <section id="why" style="position:relative;overflow:hidden;">
-  <img id="why-logo-bg" class="why-logo-bg" alt="" aria-hidden="true">
+  <img id="why-logo-bg" class="why-logo-bg" alt="" aria-hidden="true" width="750" height="750" loading="lazy">
   <div class="container">
     <div class="why-header reveal">
       <span class="section-tag">Why Choose Us</span>
@@ -2262,6 +2288,7 @@
           <label for="projectDetails">Tell us about your project</label>
           <textarea id="projectDetails" name="projectDetails" placeholder="What does your business do? What do you need from a website?"></textarea>
         </div>
+        <p class="form-gdpr-note">By submitting this form, your information is processed solely to respond to your enquiry, in line with our <a href="#" onclick="openModal('privacy');return false;">Privacy Policy</a>.</p>
         <button type="submit" class="form-submit">SEND MESSAGE →</button>
         <p class="form-note">We'll reply to info@kgdigital.ie within 24 hours.</p>
       </form>
