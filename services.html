@@ -107,6 +107,17 @@
   color: var(--bright-blue);
   font-size: 0.85rem;
 }
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--sky);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+}
+.back-btn:hover { color: var(--white); }
 .breadcrumb-nav {
   font-size: 0.8rem;
   color: rgba(240,244,255,0.4);
@@ -139,6 +150,130 @@
 <a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--bright-blue);color:#000;padding:0.5rem 1rem;z-index:9999;transition:top 0.2s;font-size:0.9rem;border-radius:0 0 4px 0;">Skip to main content</a>
 <style>.skip-link:focus{top:0;}</style>
 
+<div id="cookie-banner" role="region" aria-label="Cookie consent">
+  <p>This site uses only essential cookies required for it to function. No tracking or analytics cookies are used. <a href="#" onclick="openModal('privacy');return false;">Privacy Policy</a></p>
+  <div class="cookie-btns">
+    <button class="cookie-manage" onclick="openModal('cookie-settings')">Cookie Info</button>
+    <button class="cookie-accept" onclick="closeCookie('accept')">Got it</button>
+  </div>
+</div>
+
+<!-- PRIVACY POLICY MODAL -->
+<div id="modal-privacy" class="legal-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+  <div class="legal-modal-box">
+    <button class="legal-close" onclick="closeModal('privacy')" aria-label="Close">✕</button>
+    <h2 id="privacy-title">Privacy Policy</h2>
+    <span class="legal-date">Last updated: April 2026</span>
+    <h3>Who we are</h3>
+    <p>KG Digital is a web development and management agency based in Ireland. We are the data controller for personal data collected through this website.</p>
+    <p>Data Controller: KG Digital<br>Email: <a href="mailto:info@kgdigital.ie" style="color:var(--sky)">info@kgdigital.ie</a></p>
+    <h3>What data we collect</h3>
+    <ul>
+      <li><strong>Contact form submissions:</strong> name, email address, business name, and project details you provide voluntarily</li>
+      <li><strong>Technical data:</strong> IP address, browser type, and pages visited (retained for up to 30 days for security purposes)</li>
+    </ul>
+    <h3>Legal basis for processing</h3>
+    <ul>
+      <li><strong>Contact form data:</strong> Legitimate interest — to respond to your business enquiry (Article 6(1)(f) GDPR)</li>
+      <li><strong>Technical/security data:</strong> Legitimate interest — to maintain website security and diagnose issues</li>
+    </ul>
+    <h3>How long we keep it</h3>
+    <ul>
+      <li>Contact form data: up to 2 years, then securely deleted</li>
+      <li>Technical/log data: up to 30 days</li>
+      <li>Cookie consent preference: stored locally in your browser until you clear it</li>
+    </ul>
+    <h3>Your rights under GDPR</h3>
+    <p>As a data subject under the GDPR and the Data Protection Acts 1988–2018, you have the following rights:</p>
+    <ul>
+      <li><strong>Right of access</strong> — request a copy of the personal data we hold about you</li>
+      <li><strong>Right to rectification</strong> — request correction of inaccurate or incomplete data</li>
+      <li><strong>Right to erasure</strong> — request deletion of your personal data</li>
+      <li><strong>Right to restrict processing</strong> — request that we limit how we use your data</li>
+      <li><strong>Right to data portability</strong> — receive your data in a structured, machine-readable format</li>
+      <li><strong>Right to object</strong> — object to processing based on legitimate interest</li>
+      <li><strong>Right to withdraw consent</strong> — where processing is based on consent, you may withdraw it at any time</li>
+    </ul>
+    <p>To exercise any of these rights, email <a href="mailto:info@kgdigital.ie" style="color:var(--sky)">info@kgdigital.ie</a>. You may also lodge a complaint with the <a href="https://dataprotection.ie" target="_blank" rel="noopener noreferrer" style="color:var(--sky)">Data Protection Commission (dataprotection.ie)</a>.</p>
+    <h3>Cookies</h3>
+    <p>We use only essential cookies to make the site function. No analytics or tracking cookies are used.</p>
+    <h3>Third-party data processors</h3>
+    <ul>
+      <li><strong>Google LLC (USA)</strong> — Google Fonts. Operates under Standard Contractual Clauses for EU/EEA data transfers under Article 46 GDPR.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TERMS & CONDITIONS MODAL -->
+<div id="modal-terms" class="legal-modal" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+  <div class="legal-modal-box">
+    <button class="legal-close" onclick="closeModal('terms')" aria-label="Close">✕</button>
+    <h2 id="terms-title">Terms &amp; Conditions</h2>
+    <span class="legal-date">Last updated: April 2026</span>
+    <h3>1. Agreement</h3>
+    <p>By engaging KG Digital for services, you agree to these terms. These terms are governed by the laws of the Republic of Ireland and EU law.</p>
+    <h3>2. Services</h3>
+    <p>KG Digital provides website design, development, and ongoing management services. Specific deliverables, timelines, and fees are agreed in writing before work commences.</p>
+    <h3>3. Payment</h3>
+    <p>Invoices are due within 14 days of issue unless otherwise agreed. Late payment may result in suspension of services.</p>
+    <h3>4. Intellectual property</h3>
+    <p>Upon full payment, you own the final website and its custom content. KG Digital retains the right to display completed work in our portfolio unless you request otherwise in writing.</p>
+    <h3>5. Liability</h3>
+    <p>KG Digital's liability is limited to the value of the services provided. We are not liable for indirect losses, loss of revenue, or consequential damages.</p>
+    <h3>6. Changes &amp; cancellation</h3>
+    <p>Changes to project scope may affect timelines and cost. You may cancel within 14 days of signing an agreement for a full refund, provided no work has commenced.</p>
+    <h3>7. Contact</h3>
+    <p>For any queries: <a href="mailto:info@kgdigital.ie" style="color:var(--sky)">info@kgdigital.ie</a></p>
+  </div>
+</div>
+
+<!-- COOKIE SETTINGS MODAL -->
+<div id="modal-cookie-settings" class="legal-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-settings-title">
+  <div class="legal-modal-box">
+    <button class="legal-close" onclick="closeModal('cookie-settings')" aria-label="Close">&#x2715;</button>
+    <h2 id="cookie-settings-title">Cookie Preferences</h2>
+    <span class="legal-date">Manage your cookie settings</span>
+    <p>This site uses only essential cookies required for it to function. No analytics, tracking, or marketing cookies are used.</p>
+    <div class="cookie-pref-item">
+      <div class="cookie-pref-info">
+        <strong>Essential Cookies</strong>
+        <p>Required for the website to function. Cannot be disabled.</p>
+      </div>
+      <label class="cookie-toggle-label"><input type="checkbox" checked disabled aria-label="Essential cookies (always on)"> <span class="cookie-toggle-always">Always On</span></label>
+    </div>
+    <div style="margin-top:1.5rem;">
+      <button class="cookie-accept" onclick="closeCookie('accept');closeModal('cookie-settings')">Got it</button>
+    </div>
+  </div>
+</div>
+
+<!-- ACCESSIBILITY STATEMENT MODAL -->
+<div id="modal-accessibility" class="legal-modal" role="dialog" aria-modal="true" aria-labelledby="accessibility-title">
+  <div class="legal-modal-box">
+    <button class="legal-close" onclick="closeModal('accessibility')" aria-label="Close">&#x2715;</button>
+    <h2 id="accessibility-title">Accessibility Statement</h2>
+    <span class="legal-date">Last updated: April 2026</span>
+    <h3>Our commitment</h3>
+    <p>KG Digital is committed to making this website accessible to all users, including those with disabilities. We aim to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong>.</p>
+    <h3>Measures taken</h3>
+    <ul>
+      <li>Semantic HTML5 elements used throughout (nav, main, section, footer)</li>
+      <li>All interactive elements are keyboard navigable</li>
+      <li>Colour contrast ratios meet or exceed WCAG 2.1 AA requirements</li>
+      <li>All images have descriptive alt text or are marked decorative</li>
+      <li>Form fields are labelled and associated with their inputs</li>
+      <li>Skip-to-content link provided for keyboard users</li>
+      <li>ARIA roles and labels used where appropriate</li>
+    </ul>
+    <h3>Known limitations</h3>
+    <p>We are continuously improving accessibility. If you encounter any barriers, please contact us and we will address them promptly.</p>
+    <h3>Feedback &amp; contact</h3>
+    <p>If you experience any accessibility issues, please email <a href="mailto:info@kgdigital.ie" style="color:var(--sky)">info@kgdigital.ie</a> and we will respond within 5 working days.</p>
+    <h3>Enforcement</h3>
+    <p>If you are not satisfied with our response, you may contact the <a href="https://nda.ie" target="_blank" rel="noopener noreferrer" style="color:var(--sky)">National Disability Authority (nda.ie)</a> or the <a href="https://ihrec.ie" target="_blank" rel="noopener noreferrer" style="color:var(--sky)">Irish Human Rights and Equality Commission (ihrec.ie)</a>.</p>
+  </div>
+</div>
+
 <nav>
   <a href="index.html" class="logo">KG<span>Digital</span></a>
   <ul class="nav-links" id="nav-menu">
@@ -158,6 +293,7 @@
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
   <div class="hero-content" style="position:relative;z-index:2;">
+    <a href="index.html" class="back-btn" aria-label="Back to homepage">&#8592; Back to Home</a>
     <nav class="breadcrumb-nav" aria-label="Breadcrumb">
       <a href="index.html">Home</a> &rsaquo; Services
     </nav>
@@ -296,6 +432,13 @@
       Follow us on Instagram
     </a>
   </div>
+  <p class="footer-legal-links">
+    <a href="#" onclick="openModal('privacy');return false;">Privacy Policy</a>
+    &nbsp;|&nbsp;
+    <a href="#" onclick="openModal('terms');return false;">Terms &amp; Conditions</a>
+    &nbsp;|&nbsp;
+    <a href="#" onclick="openModal('accessibility');return false;">Accessibility</a>
+  </p>
   <p class="footer-copy">&copy; 2026 KG Digital. All rights reserved. &nbsp;|&nbsp; Based in Ireland</p>
 </footer>
 
