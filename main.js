@@ -1,4 +1,4 @@
-﻿  // Scroll reveal
+  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(entries => {
     entries.forEach((entry, i) => {
@@ -218,3 +218,30 @@
     });
     menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('nav-open');btn.classList.remove('is-open');btn.setAttribute('aria-expanded','false');});});
   })();
+
+  // Preloader Logic
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    if (sessionStorage.getItem('kg_preloader_seen')) {
+      // Already seen this session, hide immediately to avoid flicker
+      preloader.style.transition = 'none';
+      preloader.style.opacity = '0';
+      preloader.style.visibility = 'hidden';
+      preloader.style.display = 'none';
+    } else {
+      // First visit: play fast animation
+      sessionStorage.setItem('kg_preloader_seen', 'true');
+      window.addEventListener('load', function() {
+        // Adjusted delay (1200ms) to let the animation play fully without being annoyingly long
+        setTimeout(() => {
+          // Fade out (600ms)
+          preloader.style.transition = 'opacity 0.6s ease, visibility 0.6s ease';
+          preloader.classList.add('preloader-hidden');
+          
+          setTimeout(() => {
+            preloader.style.display = 'none';
+          }, 600);
+        }, 1200);
+      });
+    }
+  }

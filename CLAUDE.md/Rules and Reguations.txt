@@ -1,0 +1,592 @@
+Rules and Reguations
+ # The Complete Guide to Running a Website in Ireland
+
+
+
+Here's a comprehensive breakdown of everything you need to know:
+
+---
+
+## 🇮🇪 Legal & Regulatory Requirements
+
+### GDPR (General Data Protection Regulation)
+Since Ireland is in the EU, GDPR is strictly enforced — and Ireland's Data Protection Commission (DPC) is one of the most active regulators in Europe (it oversees Meta, Google, etc.).
+
+- You **must have a Privacy Policy** if you collect any personal data (name, email, IP address, etc.)
+- You need a **Cookie Consent banner** — users must opt *in* before non-essential cookies are set (pre-ticked boxes are illegal)
+- You must state your **lawful basis** for processing data (consent, legitimate interest, contract, etc.)
+- Users have the right to **access, delete, and port** their data — you must be able to honour these requests
+- If you collect data from EU citizens, you must appoint a **Data Controller** and potentially a **Data Protection Officer (DPO)**
+- Data breaches must be reported to the DPC within **72 hours**
+- Register with the DPC if required: **dataprotection.ie**
+
+### ePrivacy Regulations (Cookie Law)
+- Cookies that are **strictly necessary** (login sessions, shopping carts) don't need consent
+- **Analytics, marketing, and tracking cookies** require explicit opt-in consent
+- You must provide an easy way to **withdraw consent** at any time
+
+### Consumer Rights & E-Commerce (if selling online)
+- Under the **EU Consumer Rights Directive**, you must display: full business name, address, contact details, and VAT number
+- Clear **terms & conditions** and **returns policy** are required
+- You must show the **total price** including VAT and any fees before checkout
+- Customers have a **14-day right to cancel** (cooling-off period) for most goods/services bought online
+- Comply with the **Consumer Rights Act 2022** (Ireland's implementation of EU rules)
+
+### Accessibility (EN 301 549 / WCAG 2.1)
+- **Public sector websites** in Ireland are legally required to meet WCAG 2.1 AA under the **European Accessibility Act (EAA)**
+- The EAA comes into full force for **private sector** businesses in **June 2025** — this applies to e-commerce, banking, transport, and digital services
+- Key requirements: keyboard navigation, sufficient colour contrast, alt text for images, captions for video, screen reader compatibility
+
+### Intellectual Property
+- Don't use images, fonts, or code without proper licences
+- If you use open-source code, check the licence terms (MIT, GPL, etc.)
+- Protect your own brand — consider trademarking your name/logo through the **Intellectual Property Office of Ireland (IPOI)**
+
+### Business Registration
+- If operating commercially, you should be registered with the **Companies Registration Office (CRO)** or as a sole trader with Revenue
+- Display your **registered business name and address** on the site
+- Include your **VAT number** if VAT registered (required if turnover exceeds €37,500 for services or €75,000 for goods)
+
+### Defamation & Content Law
+- Ireland has strict defamation laws — be careful with user-generated content, reviews, and any claims about competitors
+- The **Defamation Act 2009** applies online as well as in print
+
+---
+
+## 🔒 Security Requirements
+
+- Use **HTTPS / SSL certificate** — mandatory for trust, SEO, and legally required if handling personal data under GDPR
+- Implement a **Content Security Policy (CSP)** header
+- Keep software, plugins, and CMS platforms updated
+- Use **strong password policies** and 2FA for admin access
+- Have a **data breach response plan**
+
+---
+
+## 🌐 Domain & Hosting
+
+- A **.ie domain** requires you to prove a connection to Ireland (Irish resident, business registered in Ireland, etc.) — managed by **IEDR (iedr.ie)**
+- Alternatively, use **.com**, **.eu**, etc.
+- For GDPR compliance, hosting within the **EU/EEA** is strongly recommended (data transfer rules apply if hosting in the US)
+
+---
+
+## 📈 SEO (Search Engine Optimisation)
+
+### Technical SEO
+- Use **HTTPS** (Google ranks secure sites higher)
+- Ensure your site is **mobile-friendly** (Google uses mobile-first indexing)
+- Fast **page load speed** — aim for Core Web Vitals passing scores (LCP, FID/INP, CLS)
+- Submit a **sitemap.xml** to Google Search Console
+- Use a **robots.txt** file correctly
+- Implement **structured data / schema markup** (LocalBusiness, Product, FAQ, etc.)
+- Fix **broken links** and avoid duplicate content
+- Use **canonical tags** to avoid duplicate page issues
+- Ensure proper **URL structure** (clean, descriptive URLs)
+
+### On-Page SEO
+- Each page needs a unique **title tag** (50–60 characters) and **meta description** (150–160 characters)
+- Use **H1, H2, H3 headings** in a logical hierarchy
+- Write high-quality, original content — Google penalises thin or copied content
+- Optimise **images** (descriptive file names, alt text, compressed file sizes)
+- Use **internal linking** between relevant pages
+
+### Local SEO (Very important for Irish businesses)
+- Create and verify a **Google Business Profile** (maps listing)
+- Use **local keywords** (e.g. "plumber Dublin", "accountant Cork")
+- Get listed on **Irish directories**: Golden Pages, Yelp IE, Bing Places, etc.
+- Ensure your **NAP (Name, Address, Phone)** is consistent everywhere online
+- Encourage **Google reviews** from customers
+- Add **LocalBusiness schema markup** to your site
+
+### Irish-Specific SEO Tips
+- Target **Irish spelling and terminology** where relevant
+- Use **hreflang tags** if you serve both Irish and international audiences
+- Consider creating content around **Irish events, holidays** (St. Patrick's Day, bank holidays) for seasonal traffic
+- Register with **Google Search Console** and **Bing Webmaster Tools**
+
+---
+
+## 📋 Must-Have Website Pages (Legal & Trust)
+
+| Page | Required? |
+|---|---|
+| Privacy Policy | ✅ Yes (GDPR) |
+| Cookie Policy / Banner | ✅ Yes (ePrivacy) |
+| Terms & Conditions | ✅ Strongly recommended |
+| Returns / Refund Policy | ✅ Yes (if selling) |
+| Contact Page (with address) | ✅ Yes (e-commerce law) |
+| Accessibility Statement | ✅ Yes (public sector; coming for private) |
+
+---
+
+## 🏛️ Key Irish Regulatory Bodies to Know
+
+| Body | Covers |
+|---|---|
+| **Data Protection Commission (DPC)** | GDPR, data privacy |
+| **Competition & Consumer Protection Commission (CCPC)** | Consumer rights, fair trading |
+| **ComReg** | Electronic communications |
+| **Revenue Commissioners** | VAT, tax obligations |
+| **IEDR** | .ie domain registration |
+| **IPOI** | Trademarks, intellectual property |
+
+---
+
+This covers the vast majority of what you'll need. The biggest priorities for most Irish websites are **GDPR compliance**, **cookie consent**, **HTTPS**, and **mobile-friendly design**. If you're selling online, the **consumer rights** rules become equally important. Would you like me to go deeper on any specific area?
+
+---
+
+## 1. GDPR — The Full Picture
+
+### What Counts as Personal Data
+Almost everything: names, email addresses, phone numbers, IP addresses, cookie IDs, location data, photos, payment info, device identifiers, and even behavioural data like browsing habits. If it can identify a person — directly or indirectly — it's personal data.
+
+### The 7 Principles You Must Follow (Article 5 GDPR)
+1. **Lawfulness, fairness, transparency** — tell people what you're doing with their data
+2. **Purpose limitation** — only collect data for a specific, stated reason; don't reuse it for something else
+3. **Data minimisation** — only collect what you actually need
+4. **Accuracy** — keep data up to date
+5. **Storage limitation** — don't keep data longer than necessary; have a retention policy
+6. **Integrity & confidentiality** — keep data secure
+7. **Accountability** — you must be able to *prove* you comply
+
+### Lawful Bases for Processing (You Must Choose One)
+- **Consent** — freely given, specific, informed, unambiguous opt-in (no pre-ticked boxes)
+- **Contract** — processing is necessary to fulfil a contract (e.g. an order)
+- **Legal obligation** — you're legally required to process it (e.g. tax records)
+- **Vital interests** — protecting someone's life
+- **Public task** — for public authorities
+- **Legitimate interests** — you have a genuine business need, but this requires a balancing test and can be overridden by the individual's rights
+
+### Privacy Policy — What It Must Contain
+- Who you are (name, address, contact)
+- What data you collect and why
+- Your lawful basis for each type of processing
+- Who you share data with (third parties, processors)
+- How long you keep data
+- Whether you transfer data outside the EU (and what safeguards are in place)
+- All 8 individual rights (see below)
+- How to complain to the DPC
+- Cookie information
+- Date of last update
+
+### The 8 Individual Rights You Must Honour
+1. **Right to be informed** — your privacy policy covers this
+2. **Right of access** — respond to Subject Access Requests (SARs) within **1 month**
+3. **Right to rectification** — correct inaccurate data within 1 month
+4. **Right to erasure ("right to be forgotten")** — delete data on request (with some exceptions)
+5. **Right to restrict processing** — limit how you use their data
+6. **Right to data portability** — provide their data in a machine-readable format
+7. **Right to object** — especially to direct marketing; you must stop immediately
+8. **Rights related to automated decision-making** — if you use profiling or automated decisions
+
+### Data Breach Protocol
+- Assess the breach immediately
+- If it risks people's rights and freedoms, report to the **DPC within 72 hours** — even if you don't have all the details yet
+- If it's *high risk*, you must also **notify the affected individuals directly**
+- Keep an internal record of ALL breaches, even minor ones
+- DPC reporting: **forms.dataprotection.ie**
+
+### Data Processors vs. Controllers
+- **You are the Controller** — you decide why and how data is processed
+- **Third-party services are Processors** — email providers (Mailchimp), analytics (Google), hosting companies, payment providers, CRMs
+- You must have a **Data Processing Agreement (DPA)** with every processor
+- Most reputable services (Google, Stripe, etc.) provide these automatically — check their terms
+
+### When You Need a Data Protection Officer (DPO)
+- You're a public authority
+- You carry out **large-scale systematic monitoring** of individuals
+- You process **special category data** at large scale (health, religion, ethnicity, sexual orientation, biometric data, political opinions)
+- If in doubt, appoint one anyway — it's good practice
+
+### Special Category Data (Extra Restrictions)
+This requires **explicit consent** or another specific condition:
+- Health/medical data
+- Biometric data
+- Genetic data
+- Racial or ethnic origin
+- Political opinions
+- Religious or philosophical beliefs
+- Trade union membership
+- Sexual orientation or sex life
+
+### International Data Transfers
+If your hosting, analytics, or any service sends data outside the EU/EEA:
+- The destination country must have an **adequacy decision** (e.g. UK currently has one, USA does not by default)
+- Or you need **Standard Contractual Clauses (SCCs)**
+- Or **Binding Corporate Rules** (for large multinationals)
+- This is particularly relevant with **Google Analytics** — Irish DPC has flagged this as a compliance issue
+
+---
+
+## 2. Cookies & ePrivacy — Full Breakdown
+
+### Cookie Categories
+| Type | Examples | Consent Required? |
+|---|---|---|
+| Strictly necessary | Login sessions, shopping cart, security | ❌ No |
+| Functional/Preference | Language, region, UI settings | ✅ Yes |
+| Analytics | Google Analytics, Hotjar, Microsoft Clarity | ✅ Yes |
+| Marketing/Advertising | Facebook Pixel, Google Ads, remarketing | ✅ Yes |
+| Social media | Facebook Like buttons, embedded tweets | ✅ Yes |
+
+### Your Cookie Banner Must
+- Appear **before** any non-essential cookies are set
+- Have a clear **Accept** and **Reject** option (equal prominence — reject cannot be hidden)
+- Not use dark patterns (e.g. green accept / grey reject, or burying the reject button)
+- Allow users to manage preferences by category
+- Let users **withdraw consent** as easily as they gave it
+- Remember consent — don't ask again on every visit (store consent record)
+- Be logged — keep a record of when and how consent was given
+
+### Cookie Policy Page
+- List every cookie on your site by name
+- State its purpose, type, and duration
+- Name the provider (first party or third party)
+- Update it when you add new cookies
+
+### Google Analytics & GDPR in Ireland
+The DPC has been particularly active here. To use GA4 legally:
+- Only fire GA after consent is given
+- Enable **IP anonymisation**
+- Turn off **data sharing** with Google's other products
+- Consider **Google Consent Mode v2** for proper integration with your cookie banner
+- Alternatively, use a privacy-friendly alternative: **Matomo** (self-hosted), **Plausible** (Irish/EU hosted option), or **Fathom**
+
+---
+
+## 3. E-Commerce Law — Complete Requirements
+
+### Information You Must Display (EU Directive 2011/83)
+Before a customer places an order you must clearly show:
+- Your full legal business name
+- Physical address (a PO box is not sufficient)
+- Email address
+- Phone number (if you have one)
+- VAT number (if registered)
+- Company registration number
+- Total price including all taxes and fees
+- Delivery costs and timescales
+- Payment methods accepted
+- Your returns and cancellation policy
+- Details of any digital content (file formats, DRM, compatibility)
+
+### The 14-Day Cooling-Off Period
+- Customers can cancel most online purchases within **14 days** of receiving goods, for **any reason**
+- You must refund within **14 days** of receiving the return
+- You cannot charge for the return of faulty goods
+- **Exceptions**: personalised items, perishables, digital content once downloaded/streamed (if they consented to waive the right), sealed hygiene products
+
+### Digital Services Act (DSA) — New EU Law
+Came into full effect in 2024 for most platforms:
+- If you host user-generated content (comments, reviews, listings), you must have a content **reporting and moderation system**
+- You must act on illegal content reports
+- Larger platforms have additional obligations (transparency reports, etc.)
+- Most small Irish websites only need basic complaint/reporting mechanisms
+
+### Payment Processing Requirements
+- Never store raw card details on your server — use a compliant payment processor (Stripe, PayPal, Square, etc.)
+- Ensure your payment processor is **PCI-DSS compliant**
+- Display trust signals (SSL padlock, payment logos)
+- If using Stripe or similar, they handle PCI compliance — but you must still follow their integration requirements
+
+### VAT Rules for Online Sales
+- If your turnover exceeds **€37,500** (services) or **€75,000** (goods), you must register for VAT in Ireland
+- Standard VAT rate in Ireland: **23%**
+- Reduced rates: 13.5% (some services/construction), 9% (hospitality/newspapers), 4.8% (agriculture)
+- Selling **digital services to EU consumers**: you must charge VAT at the **buyer's country rate** — use the **OSS (One Stop Shop)** system via Revenue to manage this
+- Selling to businesses (B2B) across the EU: reverse charge rules apply
+
+---
+
+## 4. Accessibility — Full Requirements
+
+### Why It Matters Now
+The **European Accessibility Act (EAA)** requires private sector websites and apps to meet accessibility standards if they provide services in the EU. The deadline for compliance is **28 June 2025** for new products/services. Existing services get until **28 June 2030** in some cases.
+
+### WCAG 2.1 Level AA — The Standard You Must Meet
+
+**Perceivable**
+- All images must have **alt text** (or empty alt="" if decorative)
+- Videos need **captions** and ideally transcripts
+- Audio needs transcripts
+- Text must have a **contrast ratio of at least 4.5:1** against the background (3:1 for large text)
+- Content must be **resizable up to 200%** without loss of functionality
+- Don't rely on colour alone to convey information
+
+**Operable**
+- All functionality must work with a **keyboard alone** (no mouse required)
+- Users must be able to **pause, stop, or hide** any moving, blinking, or auto-updating content
+- No content that flashes more than **3 times per second** (seizure risk)
+- Each page must have a **descriptive title**
+- Navigation links must be consistent across pages
+- Provide **skip navigation links** (to jump to main content)
+- Give users enough time to read and interact — don't time out sessions without warning
+
+**Understandable**
+- Declare the **language of the page** in the HTML (`<html lang="en">`)
+- Navigation must be **consistent** throughout the site
+- Form fields must have proper **labels**
+- Error messages must clearly explain what went wrong and how to fix it
+
+**Robust**
+- Use valid, semantic HTML
+- Ensure compatibility with **screen readers** (NVDA, JAWS, VoiceOver)
+- Use ARIA attributes where necessary
+
+### Accessibility Statement (Required for Public Sector, Best Practice for All)
+- State your compliance level
+- List any known issues and planned fix dates
+- Provide a contact method for accessibility issues
+- Reference the enforcement body
+
+### Tools to Test Accessibility
+- **WAVE** (wave.webaim.org) — free browser tool
+- **axe DevTools** — Chrome extension
+- **Lighthouse** in Chrome DevTools
+- **Colour Contrast Analyser** — desktop app
+- Manual keyboard testing — tab through your entire site
+
+---
+
+## 5. Security — Full Technical Checklist
+
+### SSL/HTTPS
+- Every website must use HTTPS — get a free certificate via **Let's Encrypt** or buy one from your host
+- Redirect all HTTP traffic to HTTPS (301 redirect)
+- Use **HSTS** (HTTP Strict Transport Security) headers
+- Ensure your SSL certificate covers all subdomains if needed (wildcard cert)
+
+### HTTP Security Headers (Add to Your Server Config)
+```
+Content-Security-Policy (CSP)
+X-Frame-Options: DENY or SAMEORIGIN
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy
+Strict-Transport-Security (HSTS)
+```
+Test your headers at **securityheaders.com**
+
+### Password & Account Security
+- Admin passwords must be **strong and unique** (use a password manager)
+- Enable **two-factor authentication (2FA)** on all admin accounts
+- Limit login attempts (brute force protection)
+- Change default admin usernames (e.g. never use "admin" on WordPress)
+- Use **role-based access** — don't give everyone admin access
+
+### Platform Security (WordPress etc.)
+- Keep the CMS, themes, and plugins **updated at all times**
+- Delete unused plugins and themes
+- Use a security plugin (Wordfence, Sucuri)
+- Set up **automated backups** — daily, stored off-site
+- Consider a **Web Application Firewall (WAF)**
+- Disable XML-RPC if you're not using it
+- Hide your WordPress version number
+
+### General Infrastructure
+- Use a reputable, **EU-based host** (compliance + performance)
+- Set up **DDoS protection** (Cloudflare free tier covers this)
+- Run regular **vulnerability scans**
+- Use **Content Delivery Network (CDN)** for performance and security
+- Monitor uptime with free tools (UptimeRobot, Better Uptime)
+
+---
+
+## 6. SEO — Full Deep Dive
+
+### Core Web Vitals (Google's Ranking Signals)
+| Metric | What It Measures | Target |
+|---|---|---|
+| **LCP** (Largest Contentful Paint) | Loading speed of main content | Under 2.5 seconds |
+| **INP** (Interaction to Next Paint) | Responsiveness to user input | Under 200ms |
+| **CLS** (Cumulative Layout Shift) | Visual stability (elements jumping around) | Under 0.1 |
+
+Test with: **PageSpeed Insights** (pagespeed.web.dev), **Google Search Console**, or **GTmetrix**
+
+### Technical SEO Checklist
+- **robots.txt** — tells search engines what to crawl (don't accidentally block your whole site)
+- **sitemap.xml** — submit to Google Search Console and Bing Webmaster Tools
+- **Canonical tags** — prevent duplicate content issues
+- **Hreflang tags** — if serving Irish English vs British English vs international audiences
+- **Structured data / Schema markup** — helps Google understand your content
+- **404 pages** — create a helpful custom 404 page
+- **Redirect chains** — avoid long chains (301 → 301 → 301); go direct
+- **Crawl budget** — don't waste it on low-value pages (thank-you pages, filters, etc.)
+- **Core Web Vitals** — see above
+- **Mobile-first design** — Google indexes the mobile version of your site
+
+### Schema Markup Types Relevant to Irish Businesses
+- `LocalBusiness` — address, hours, phone, area served
+- `Product` — for e-commerce
+- `FAQPage` — FAQ sections
+- `BreadcrumbList` — navigation trail
+- `Review` / `AggregateRating` — product/service reviews
+- `Event` — if you run events
+- `Article` / `BlogPosting` — for content
+
+Use **Google's Rich Results Test** to validate your schema.
+
+### On-Page SEO
+- One **H1 per page** — make it descriptive and include your target keyword naturally
+- Title tags: **50–60 characters**, unique per page, include keyword near the start
+- Meta descriptions: **150–160 characters**, written to encourage clicks (not a ranking factor, but affects click-through rate)
+- **URL structure**: `/services/web-design-dublin/` not `/page?id=47`
+- **Internal linking**: link related pages together with descriptive anchor text
+- **Image optimisation**: compress images (use WebP format), add alt text, use descriptive filenames
+- Avoid **keyword stuffing** — write naturally for humans first
+- Aim for **E-E-A-T**: Experience, Expertise, Authoritativeness, Trustworthiness — Google rewards this heavily
+
+### Local SEO for Ireland — Full Checklist
+- Claim and fully complete your **Google Business Profile**
+  - Add all categories
+  - Upload photos regularly
+  - Add your opening hours (including Irish bank holidays)
+  - Enable messaging
+  - Post updates regularly
+  - Answer questions in the Q&A section
+- Respond to **every Google review** — positive and negative
+- Build **local citations** (consistent NAP across):
+  - Golden Pages (goldenpages.ie)
+  - Yelp Ireland
+  - Bing Places
+  - Apple Maps Connect
+  - Foursquare
+  - Hotfrog
+  - IrishBusinesses.ie
+  - Local county directories
+- Get **local backlinks**:
+  - Local newspapers (IrishTimes.com, TheJournal.ie, local papers)
+  - Chamber of Commerce membership listings
+  - Local business association directories
+  - Sponsor local events for links
+- Target **county and city-specific keywords** (Dublin, Cork, Galway, Limerick, etc.)
+- Create **location pages** if you serve multiple areas
+
+### Content Strategy for Irish SEO
+- Target **long-tail Irish keywords**: "solicitor Galway city centre", "wedding photographer Wicklow"
+- Create content around **Irish search intent**: Irish-specific guides, comparisons, "best of" lists
+- Write about **local topics** relevant to your industry
+- Use **Irish events and dates** for content hooks (St. Patrick's Day, Bloomsday, All-Ireland finals, etc.)
+- Consider writing about **Irish regulations** relevant to your industry — high-value informational content with very low competition
+
+---
+
+## 7. Performance Optimisation
+
+### Image Optimisation
+- Use **WebP** format (significantly smaller than JPEG/PNG)
+- **Compress** all images before uploading (TinyPNG, Squoosh)
+- Set proper **width and height attributes** to prevent layout shift (CLS)
+- Use **lazy loading** for images below the fold (`loading="lazy"`)
+- Use a **CDN** to serve images from servers closer to the user
+
+### Code Optimisation
+- **Minify** HTML, CSS, and JavaScript
+- **Defer or async** non-critical JavaScript
+- Remove unused CSS (PurgeCSS for Tailwind etc.)
+- Reduce third-party scripts — every external script adds load time
+- Use **browser caching** — set cache headers for static assets
+- Enable **Gzip or Brotli compression** on your server
+- Use **preload** for critical fonts and resources
+
+### Hosting for Ireland
+- If most of your users are in Ireland, use a host with **EU data centres** — ideally in Dublin, Frankfurt, or Amsterdam (AWS eu-west-1 Dublin is ideal)
+- Good EU-based hosts: **Kinsta**, **WP Engine** (EU region), **Siteground** (EU servers), **Blacknight** (Irish company), **WebHosting.ie** (Irish)
+- Use **Cloudflare** (free CDN) to serve cached content from edge locations worldwide
+
+---
+
+## 8. Domain & Brand
+
+### Getting a .ie Domain
+- Managed by **IEDR (iedr.ie)**
+- To register, you must prove an Irish connection:
+  - Irish resident (with Irish address)
+  - Business registered in Ireland (CRO number)
+  - Irish trademark holder
+  - Association with Ireland
+- Cost: approximately **€25–€35/year** depending on registrar
+- Recommended Irish registrars: **Blacknight**, **Register365**, **WebHosting.ie**
+- A .ie domain signals trust to Irish users and **improves local SEO rankings** in Ireland
+
+### Trademark Considerations
+- Before launching, check your name isn't already trademarked at **ipoi.gov.ie**
+- Also check the **EU Intellectual Property Office (euipo.europa.eu)** for EU-wide trademarks
+- Consider registering your own trademark — costs approximately €70–€170 per class via IPOI
+- Check domain and social media handle availability before committing to a name
+
+---
+
+## 9. Legal Pages — Full Templates Guide
+
+### Privacy Policy Must Include
+Every item listed in Section 1 above. Keep it in **plain English** — legalese is not a GDPR requirement and actually works against you.
+
+### Terms & Conditions Should Cover
+- Who the contract is between
+- Acceptable use of the site
+- Intellectual property ownership
+- Limitation of liability
+- Governing law (**Republic of Ireland** and **EU law**)
+- Dispute resolution
+- How you can change the T&Cs
+- Account suspension/termination (if you have accounts)
+
+### Returns Policy Must State
+- Time period for returns (minimum 14 days by law)
+- Condition goods must be in
+- Who pays return shipping
+- Refund timeline (must be within 14 days of receiving the return)
+- Any non-returnable items (clearly flagged **before** purchase)
+
+### Acceptable Use Policy (If You Have User Accounts or UGC)
+- What users can and cannot post
+- Your right to remove content
+- Consequences of violations
+- How to report content
+
+---
+
+## 10. Key Irish Regulatory Bodies — Full Contact Info
+
+| Body | Website | What They Do |
+|---|---|---|
+| **Data Protection Commission** | dataprotection.ie | GDPR enforcement, breach reporting |
+| **CCPC** | ccpc.ie | Consumer rights, e-commerce rules |
+| **ComReg** | comreg.ie | Electronic communications, spam |
+| **Revenue Commissioners** | revenue.ie | VAT, tax, OSS registration |
+| **IEDR** | iedr.ie | .ie domain registration |
+| **IPOI** | ipoi.gov.ie | Trademarks, patents, copyright |
+| **CRO** | cro.ie | Company registration |
+| **Enterprise Ireland** | enterprise-ireland.com | Grants, support for Irish businesses online |
+
+---
+
+## 11. Ongoing Compliance — What to Do Regularly
+
+### Monthly
+- Check Google Search Console for crawl errors, manual actions, Core Web Vitals issues
+- Monitor uptime and performance
+- Respond to all reviews
+- Post to Google Business Profile
+
+### Quarterly
+- Update your cookie audit (have any new third-party tools been added?)
+- Check for broken links
+- Review and update content
+- Run an accessibility check
+- Check for CMS/plugin updates
+
+### Annually
+- Review and update your Privacy Policy and T&Cs
+- Renew domain and SSL certificates
+- Full security audit
+- Review your data retention — delete data you no longer need
+- Check your data processor agreements are still current
+- Review VAT thresholds (have you crossed the registration threshold?)
+
+---
+
+This is the full picture. The most common mistakes Irish website owners make are: ignoring cookie consent, having an outdated or vague privacy policy, not being accessible, and skipping local SEO. Would you like me to help you with any specific part — for example, drafting a privacy policy, setting up a cookie banner, or building out a local SEO strategy?
