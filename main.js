@@ -28,32 +28,35 @@
   });
 
   // Form submit
-  document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('.form-submit');
-    btn.textContent = 'SENDING...';
-    btn.disabled = true;
-    btn.style.opacity = '0.7';
-    try {
-      const res = await fetch('https://formspree.io/f/xlganenn', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(this)
-      });
-      if (res.ok) {
-        this.style.display = 'none';
-        document.getElementById('formSuccess').style.display = 'block';
-      } else {
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('.form-submit');
+      btn.textContent = 'SENDING...';
+      btn.disabled = true;
+      btn.style.opacity = '0.7';
+      try {
+        const res = await fetch('https://formspree.io/f/xlganenn', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(this)
+        });
+        if (res.ok) {
+          this.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        } else {
+          btn.textContent = 'SEND FAILED — TRY AGAIN';
+          btn.disabled = false;
+          btn.style.opacity = '1';
+        }
+      } catch {
         btn.textContent = 'SEND FAILED — TRY AGAIN';
         btn.disabled = false;
         btn.style.opacity = '1';
       }
-    } catch {
-      btn.textContent = 'SEND FAILED — TRY AGAIN';
-      btn.disabled = false;
-      btn.style.opacity = '1';
-    }
-  });
+    });
+  }
 
   // Count up numbers
   function countUp(el, target, suffix) {
@@ -116,7 +119,8 @@
   // Cookie consent
   function closeCookie(choice) {
     localStorage.setItem('kg_cookie_consent', choice);
-    document.getElementById('cookie-banner').style.transform = 'translateY(100%)';
+    const banner = document.getElementById('cookie-banner');
+    if (banner) banner.style.transform = 'translateY(100%)';
   }
 
   // Save granular cookie preferences from settings modal
@@ -135,7 +139,8 @@
     localStorage.setItem('kg_cookie_consent', choice);
     if (analytics) localStorage.setItem('kg_cookie_analytics', analytics ? analytics.checked : false);
     if (functional) localStorage.setItem('kg_cookie_functional', functional ? functional.checked : false);
-    document.getElementById('cookie-banner').style.transform = 'translateY(100%)';
+    const banner = document.getElementById('cookie-banner');
+    if (banner) banner.style.transform = 'translateY(100%)';
     closeModal('cookie-settings');
   }
   window.saveCookiePrefs = saveCookiePrefs;
@@ -160,7 +165,8 @@
   // Show cookie banner if no consent yet
   setTimeout(() => {
     if (!localStorage.getItem('kg_cookie_consent')) {
-      document.getElementById('cookie-banner').classList.add('visible');
+      const banner = document.getElementById('cookie-banner');
+      if (banner) banner.classList.add('visible');
     }
   }, 1200);
 
