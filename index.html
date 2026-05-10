@@ -659,28 +659,32 @@
 
   <div class="pricing-extras reveal" style="max-width: 900px; margin: 4rem auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 0 1.5rem;">
     
-    <div class="extra-block" style="background: rgba(8,13,26,0.6); border: 1px solid rgba(240,244,255,0.08); border-radius: 16px; padding: 2.5rem; position: relative; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.borderColor='rgba(37,99,196,0.4)'; this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(240,244,255,0.08)'; this.style.transform='translateY(0)';">
-      <div style="position:absolute; top:0; left:0; width:100%; height:4px; background: linear-gradient(90deg, var(--bright-blue), var(--sky));"></div>
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 1.5rem;">
-        <div style="background: rgba(37,99,196,0.15); width: 48px; height: 48px; border-radius: 12px; display:flex; align-items:center; justify-content:center; color: var(--sky);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+    <!-- Free Domain Card -->
+    <div class="extra-block" style="background: linear-gradient(160deg, rgba(10,22,40,0.7), rgba(8,13,26,0.9)); border: 1px solid rgba(59,130,246,0.25); border-radius: 6px; padding: 2.5rem; position: relative; overflow: hidden; transition: border-color 0.3s, transform 0.3s;" onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'; this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(59,130,246,0.25)'; this.style.transform='none';">
+      <!-- Glow effect -->
+      <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+      
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem;">
+        <div style="width: 44px; height: 44px; border-radius: 4px; background: rgba(37,99,196,0.15); border: 1px solid rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; color: var(--bright-blue); flex-shrink: 0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
         </div>
-        <span style="background: rgba(37,99,196,0.2); color: var(--sky); font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid rgba(37,99,196,0.3);">Included</span>
+        <h3 style="font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; margin: 0; color: #fff;">Free Domain for Year One</h3>
       </div>
-      <h3 style="font-family: 'Syne', sans-serif; font-size: 1.3rem; margin-bottom: 0.8rem; color: #fff;">Free Domain for Year One</h3>
-      <p style="color:rgba(240,244,255,0.65); line-height: 1.6; font-size: 0.95rem; margin:0;">We’ll cover the cost of your new .ie or .com domain for the first twelve months. After the first year, it simply renews at the standard rate and is entirely yours to manage.</p>
+      <p style="color:rgba(240,244,255,0.65); line-height: 1.7; font-size: 0.95rem; margin: 0;">We’ll cover the cost of your new .ie or .com domain for the first twelve months. After the first year, it simply renews at the standard rate and is entirely yours to manage.</p>
     </div>
 
-    <div class="extra-block" style="background: rgba(8,13,26,0.6); border: 1px solid rgba(240,244,255,0.08); border-radius: 16px; padding: 2.5rem; position: relative; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.borderColor='rgba(37,99,196,0.4)'; this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(240,244,255,0.08)'; this.style.transform='translateY(0)';">
-      <div style="position:absolute; top:0; left:0; width:100%; height:4px; background: linear-gradient(90deg, var(--sky), var(--bright-blue));"></div>
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 1.5rem;">
-        <div style="background: rgba(37,99,196,0.15); width: 48px; height: 48px; border-radius: 12px; display:flex; align-items:center; justify-content:center; color: var(--sky);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    <!-- Professional Email Card -->
+    <div class="extra-block" style="background: linear-gradient(160deg, rgba(10,22,40,0.7), rgba(8,13,26,0.9)); border: 1px solid rgba(59,130,246,0.25); border-radius: 6px; padding: 2.5rem; position: relative; overflow: hidden; transition: border-color 0.3s, transform 0.3s;" onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'; this.style.transform='translateY(-4px)';" onmouseout="this.style.borderColor='rgba(59,130,246,0.25)'; this.style.transform='none';">
+      <!-- Glow effect -->
+      <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+      
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem;">
+        <div style="width: 44px; height: 44px; border-radius: 4px; background: rgba(37,99,196,0.15); border: 1px solid rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; color: var(--bright-blue); flex-shrink: 0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
         </div>
-        <span style="background: rgba(37,99,196,0.2); color: var(--sky); font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid rgba(37,99,196,0.3);">Included</span>
+        <h3 style="font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; margin: 0; color: #fff;">Professional Business Email</h3>
       </div>
-      <h3 style="font-family: 'Syne', sans-serif; font-size: 1.3rem; margin-bottom: 0.8rem; color: #fff;">Professional Business Email</h3>
-      <p style="color:rgba(240,244,255,0.65); line-height: 1.6; font-size: 0.95rem; margin:0;">We set up Google Workspace for you, giving your business a professional email address (like hello@yourbusiness.ie) along with access to Google Drive and Gmail. We pay for your first month's subscription, and you handle the standard monthly cost from there on.</p>
+      <p style="color:rgba(240,244,255,0.65); line-height: 1.7; font-size: 0.95rem; margin: 0;">We set up Google Workspace for you, giving your business a professional email address (like hello@yourbusiness.ie) along with access to Google Drive and Gmail. We pay for your first month's subscription, and you handle the standard monthly cost from there on.</p>
     </div>
 
   </div>
