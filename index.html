@@ -76,6 +76,35 @@
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="styles.css">
+<style>
+#booking{background:linear-gradient(to bottom,var(--deep),var(--black));border-top:1px solid rgba(37,99,196,0.15);}
+.booking-frame-wrap{max-width:900px;margin:0 auto;background:rgba(10,22,40,0.5);border:1px solid rgba(37,99,196,0.2);border-radius:4px;overflow:hidden;}
+.booking-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 2rem;gap:1rem;}
+.booking-placeholder h3{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);}
+.booking-placeholder p{color:rgba(240,244,255,0.5);max-width:440px;line-height:1.7;}
+.bp-icon{width:64px;height:64px;background:rgba(37,99,196,0.15);border:1px solid rgba(59,130,246,0.25);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 0.5rem;}
+#booking iframe{display:block;width:100%;}
+.booking-card{display:grid;grid-template-columns:1fr 1.4fr;gap:0;max-width:900px;margin:0 auto;background:rgba(10,22,40,0.5);border:1px solid rgba(37,99,196,0.25);border-radius:4px;overflow:hidden;}
+.booking-card-left{padding:3rem 2.5rem;border-right:1px solid rgba(37,99,196,0.15);background:rgba(8,13,26,0.4);display:flex;flex-direction:column;gap:2rem;}
+.booking-card-icon{width:56px;height:56px;background:rgba(37,99,196,0.15);border:1px solid rgba(59,130,246,0.25);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--bright-blue);}
+.booking-card-meta{display:flex;flex-direction:column;gap:1rem;}
+.booking-type{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--white);}
+.booking-detail{display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:rgba(240,244,255,0.45);line-height:1.5;}
+.booking-detail svg{flex-shrink:0;color:var(--bright-blue);}
+.booking-card-right{padding:3rem 2.5rem;display:flex;flex-direction:column;gap:1.2rem;}
+.booking-card-title{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);line-height:1.2;}
+.booking-card-desc{font-size:0.9rem;color:rgba(240,244,255,0.5);line-height:1.75;}
+.booking-card-points{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.6rem;}
+.booking-card-points li{font-size:0.875rem;color:rgba(240,244,255,0.55);display:flex;align-items:center;gap:0.7rem;}
+.booking-card-points li::before{content:'✓';color:var(--bright-blue);font-size:0.8rem;flex-shrink:0;}
+.booking-cta-btn{display:inline-flex;align-items:center;gap:0.7rem;background:linear-gradient(135deg,var(--blue),var(--bright-blue));color:var(--white);padding:0.9rem 1.8rem;border-radius:2px;text-decoration:none;font-weight:500;font-size:0.95rem;transition:all 0.3s ease;margin-top:0.5rem;width:fit-content;position:relative;overflow:hidden;}
+.booking-cta-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--bright-blue),var(--sky));opacity:0;transition:opacity 0.3s;}
+.booking-cta-btn:hover::before{opacity:1;}
+.booking-cta-btn:hover{transform:translateY(-2px);box-shadow:0 20px 40px rgba(37,99,196,0.4);}
+.booking-cta-btn span,.booking-cta-btn svg{position:relative;z-index:1;}
+.booking-card-note{font-size:0.75rem;color:rgba(240,244,255,0.25);}
+@media(max-width:700px){.booking-card{grid-template-columns:1fr;}.booking-card-left{border-right:none;border-bottom:1px solid rgba(37,99,196,0.15);padding:2rem 1.5rem;}.booking-card-right{padding:2rem 1.5rem;}}
+</style>
 </head>
 <body>
 
@@ -244,6 +273,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#reviews-cta">Reviews</a></li>
+    <li><a href="#booking">Book a Call</a></li>
     <li><a href="#contact" class="nav-cta">Get Started</a></li>
   </ul>
 </nav>
@@ -707,6 +737,63 @@
     <div class="reviews-cta-btns reveal">
       <a href="https://g.page/r/CcLOx3u53SYpEBM/review" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>&#11088; Leave a Google Review</span></a>
       <a href="mailto:info@kgdigital.ie?subject=Website%20Feedback" class="btn-ghost">Send Direct Feedback</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK A CALL -->
+<section id="booking">
+  <div class="reveal" style="text-align:center;max-width:620px;margin:0 auto 3.5rem;">
+    <div class="section-label" style="justify-content:center">Schedule a Call</div>
+    <h2 class="section-title">Book a free<br><span class="accent">Discovery Call.</span></h2>
+    <p style="color:rgba(240,244,255,0.5);line-height:1.7;margin-top:1rem;">Pick a time that suits you — no pressure, no obligation. Just a 20-minute chat about your project.</p>
+  </div>
+
+  <div class="booking-frame-wrap reveal">
+    <!--
+      ╔══════════════════════════════════════════════════════════════╗
+      ║   HOW TO ACTIVATE YOUR GOOGLE CALENDAR BOOKING WIDGET       ║
+      ╠══════════════════════════════════════════════════════════════╣
+      ║  Step 1: Go to calendar.google.com                          ║
+      ║  Step 2: Click the ⚙️ gear icon → "Settings"               ║
+      ║  Step 3: In the left sidebar click "Appointment schedules"  ║
+      ║  Step 4: Click "+ New appointment schedule"                 ║
+      ║  Step 5: Set title (e.g. "Discovery Call"), duration,       ║
+      ║          and your available hours                            ║
+      ║  Step 6: Save it, then click "Open booking page"            ║
+      ║  Step 7: Copy the URL from your browser address bar         ║
+      ║  Step 8: Replace YOUR_BOOKING_LINK_HERE below with that URL ║
+      ║  Step 9: Delete the .booking-placeholder div below and      ║
+      ║          uncomment the <iframe> block                        ║
+      ╚══════════════════════════════════════════════════════════════╝
+    -->
+
+    <div class="booking-card">
+      <div class="booking-card-left">
+        <div class="booking-card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="booking-card-meta">
+          <span class="booking-type">Discovery Call</span>
+          <div class="booking-detail"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 20 minutes</div>
+          <div class="booking-detail"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94M1 1l22 22M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 5a10.9 10.9 0 0 0-1.956 2.985m-.944 3.668A11.05 11.05 0 0 0 3.06 14M4.34 17.122A9 9 0 0 0 10.55 21M9 9a3 3 0 0 1 5.12-2.126"/></svg> Google Meet — link sent after booking</div>
+          <div class="booking-detail"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Ireland / UK time zones</div>
+        </div>
+      </div>
+      <div class="booking-card-right">
+        <h3 class="booking-card-title">Let's talk about your project</h3>
+        <p class="booking-card-desc">A quick 20-minute call to understand your business, answer your questions, and see if we're a good fit — no pressure, no hard sell.</p>
+        <ul class="booking-card-points">
+          <li>What your business needs from a website</li>
+          <li>Timeline and budget expectations</li>
+          <li>How our process works end-to-end</li>
+        </ul>
+        <a href="https://calendar.app.google/deSUdJ3pEqShG7yt7" target="_blank" rel="noopener noreferrer" class="booking-cta-btn">
+          <span>Check Available Times</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <p class="booking-card-note">Opens Google Calendar — pick a time that suits you</p>
+      </div>
     </div>
   </div>
 </section>
