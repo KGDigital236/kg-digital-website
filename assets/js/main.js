@@ -88,33 +88,10 @@ if (statsStrip) statsObs.observe(statsStrip);
 function flipCard(name) {
 const card = document.getElementById('card-' + name);
 card.classList.toggle('flipped');
-
-if (ring) {
-ring.style.transform = 'translate(-50%,-50%) scale(2)';
-ring.style.borderColor = 'rgba(59,130,246,0.9)';
-setTimeout(() => {
-ring.style.transform = 'translate(-50%,-50%) scale(1)';
-ring.style.borderColor = 'rgba(96,165,250,0.5)';
-}, 400);
-}
 }
 
 
 window.flipCard = flipCard;
-
-
-document.querySelectorAll('.team-card, .contact-link-item, .value-item').forEach(el => {
-el.addEventListener('mouseenter', () => {
-cursor.style.transform = 'translate(-50%,-50%) scale(2)';
-ring.style.transform = 'translate(-50%,-50%) scale(1.5)';
-ring.style.borderColor = 'rgba(96,165,250,0.8)';
-});
-el.addEventListener('mouseleave', () => {
-cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-ring.style.transform = 'translate(-50%,-50%) scale(1)';
-ring.style.borderColor = 'rgba(96,165,250,0.5)';
-});
-});
 
 
 function closeCookie(choice) {
