@@ -1,0 +1,7 @@
+.tmp.driveupload/
+.claude/
+CLAUDE.md/
+docs/
+desktop.ini
+*.png.png
+*.svg.svg
